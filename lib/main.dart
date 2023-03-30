@@ -1,3 +1,4 @@
+import 'package:application/screens/create_new_password.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
@@ -14,8 +15,7 @@ class MyHouse extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
        debugShowCheckedModeBanner: false,
-        home: SplashView(),
-      
+        home: SplashView(),    
     );
   }
 }

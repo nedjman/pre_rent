@@ -38,7 +38,6 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   @override
   Widget build(BuildContext context) {
    SizeConfig().int(context);
-    var theme;
     return Container( 
       width:double.infinity,
       height:double.infinity,
@@ -50,25 +49,22 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
      ),
 
            child:Column(
-           
-               children: [
-              RichText(
-             text: TextSpan(
-                 text: 'Ren',
-                style: theme.headline1,
-                 children: [
-                 TextSpan(
-                 text: 'House',
+          children: [
+            AnimatedBuilder(animation: fadingAnimation!,
+             builder: (context, _) => Opacity(
+              opacity: fadingAnimation!.value,
+            child: Text(
+                 'Ren',
                 style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 51,
                 fontWeight: FontWeight.bold,
                 color: const Color(0Xffffffff),
-                 ),
-                 ),
-                 ] ),
-                 ),
-             ], 
+               ),
+               ),
+                ),
+               ),
+           ],
              ),
          );
   }

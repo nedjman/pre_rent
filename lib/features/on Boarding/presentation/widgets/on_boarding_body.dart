@@ -9,6 +9,8 @@ import 'package:get/get.dart';
 
 import '../../../../core/utils/size_config.dart';
 import '../../../../core/widgets/custom_buttons.dart';
+import '../../../../screens/create_new_password.dart';
+import '../../../../screens/login_screen.dart';
 import 'custom_indicator.dart';
 import 'custom_page_view.dart';
 
@@ -58,6 +60,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           child: Positioned(
             top: SizeConfig.defaultSize! *10,
             right: 32,
+            child: InkWell(
             child: Text(
               'Passer',
               style: TextStyle(
@@ -66,6 +69,10 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                 color: const Color(0XFF898989),
               ),
               textAlign: TextAlign.left,
+            ),
+        onTap: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(context) => const LoginScreen()));
+                   },
             ),
           ),
         ),
@@ -81,7 +88,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                 duration: Duration(milliseconds: 500), 
                 curve: Curves.easeIn);
                 } else  {
-                  Get.to(() => loginView(), transition: Transition.rightToLeft, duration: Duration(milliseconds: 500));
+                  Get.to(() => LoginScreen(), transition: Transition.rightToLeft, duration: Duration(milliseconds: 500));
                 }
             },
              text: pageController!.hasClients ? (pageController?.page == 2 ? 'Démarrer':'Suivante') : 'Suivante',
@@ -90,6 +97,6 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
     );
     }
     
-      loginView() {}
+      
 }
 
