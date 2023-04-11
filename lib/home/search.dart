@@ -422,7 +422,6 @@ class _SearchState extends State<Search> {
       ),
     );
   }
-
   void _showBottomSheet(){
     showModalBottomSheet(
       context: context,

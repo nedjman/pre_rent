@@ -12,7 +12,6 @@ class Property {
   List<String> images;
 
   Property(this.label, this.name, this.price, this.location, this.sqm, this.review, this.description, this.frontImage, this.ownerImage, this.images);
-
 }
 
 List<Property> getPropertyList(){

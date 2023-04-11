@@ -2,7 +2,6 @@ class Nature {
   final String name;
 
   final String url;
-
   Nature(
     this.name,
     this.url,

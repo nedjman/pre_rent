@@ -18,6 +18,7 @@ class PageTitleBar extends StatelessWidget {
             topLeft: Radius.circular(50),
             topRight: Radius.circular(50),
           ),
+          
         ),
         child: Padding(
           padding: const EdgeInsets.only(top:16.0),

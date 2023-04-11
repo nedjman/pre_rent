@@ -6,7 +6,6 @@ import 'package:application/core/constants.dart';
 class Upside extends StatelessWidget {
   const Upside({Key? key, required this.imgUrl}) : super(key: key);
   final String imgUrl;
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

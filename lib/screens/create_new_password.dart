@@ -21,7 +21,6 @@ import 'login_screen.dart';
 
 class CreateNewPassword extends StatelessWidget {
   const CreateNewPassword ({super.key});
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

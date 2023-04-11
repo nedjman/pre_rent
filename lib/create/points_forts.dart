@@ -98,7 +98,6 @@ class _PointsFortsState extends State<PointsForts> {
       ),
     );
   }
-
   String getSelectedItemCount() {
     return selectedItem.isNotEmpty
         ? selectedItem.length.toString() + " item selected"
@@ -117,7 +116,6 @@ class _PointsFortsState extends State<PointsForts> {
       //Other logic
     }
   }
-
   InkWell getListItem(Nature nature) {
     return InkWell(
         onTap: () {

@@ -104,7 +104,6 @@ class Detail extends StatelessWidget {
                     ),
                   ),
                 ),
-
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 24),
                   child: Row(

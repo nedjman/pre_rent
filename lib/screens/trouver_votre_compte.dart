@@ -12,7 +12,6 @@ import 'create_new_password.dart';
 
 class TrouverVotreCompte extends StatelessWidget {
   const TrouverVotreCompte ({super.key});
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

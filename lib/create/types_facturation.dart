@@ -30,7 +30,6 @@ class _TypesFacturationState extends State<TypesFacturation>{
       val2 = newValue2;
     });
    }
-
  @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -67,7 +66,6 @@ class _TypesFacturationState extends State<TypesFacturation>{
           ),
           ),
           ),
-          
           const SizedBox(width: 50),
           TextButton(onPressed: null, child: const Text("Suivante",style: TextStyle(
           fontWeight: FontWeight.bold, fontSize: 17),),

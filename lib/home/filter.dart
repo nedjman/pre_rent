@@ -12,7 +12,6 @@ class Filter extends StatefulWidget {
 class _FilterState extends State<Filter> {
 
   var selectedRange = RangeValues(400, 1000);
-
   @override
   Widget build(BuildContext context) {
     return Container(
