@@ -9,6 +9,11 @@ import '../components/page_title_bar.dart';
 import '../components/under_part.dart';
 import '../components/upside.dart';
 import '../core/constants.dart';
+import '../create/points_forts.dart';
+import '../create/type_facturation.dart';
+import '../create/types_facturation.dart';
+import '../home/home.dart';
+import '../home/search.dart';
 import '../widgets/rounded_button.dart';
 import '../widgets/rounded_input_field.dart';
 import '../widgets/rounded_password_field.dart';
@@ -56,7 +61,13 @@ class CreateNewPassword extends StatelessWidget {
                                   hintText: "Mot de passe"),
                               const RoundedPasswordField(
                                   hintText: "Confirmer mot de passe"),
-                              RoundedButton(text: 'Sauvegarder', press: () {},),
+                              RoundedButton( press: () {
+                                 Navigator.push(context, MaterialPageRoute(builder: (context) => TypesFacturation(),
+                                 ),
+                                 );
+                              },
+                                text: 'Sauvegarder',
+                              ),
                               const SizedBox(
                                 height: 50,
                               ),

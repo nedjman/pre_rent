@@ -7,6 +7,7 @@ import '../components/page_title_bar.dart';
 import '../components/under_part.dart';
 import '../components/upside.dart';
 import '../core/constants.dart';
+import '../home/search.dart';
 import '../widgets/rounded_button.dart';
 import '../widgets/rounded_icon.dart';
 import '../widgets/rounded_input_field.dart';
@@ -67,7 +68,13 @@ class LoginScreen extends StatelessWidget {
                                   hintText: "Email", icon: Icons.email),
                               const RoundedPasswordField(hintText: 'Mot de passe',),
                               switchListTile(),
-                              RoundedButton(text: 'LOGIN', press: (){},),
+                              RoundedButton(press: (){
+                                 Navigator.push(context, MaterialPageRoute(builder: (context) => Search(),
+                                 ),
+                                 );
+                              },
+                                text: 'LOGIN',
+                              ),
                               const SizedBox(
                                 height: 10,
                               ),
