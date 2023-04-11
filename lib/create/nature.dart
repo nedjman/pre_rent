@@ -7,7 +7,6 @@ class Nature {
     this.name,
     this.url,
   );
-
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
