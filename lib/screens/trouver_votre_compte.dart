@@ -56,7 +56,7 @@ class TrouverVotreCompte extends StatelessWidget {
                               fontSize: 13,
                               fontWeight: FontWeight.w600),
                         ),
-                              const RoundedInputField(
+                               RoundedInputField(
                                   hintText: "exemple@gmail.com", icon: Icons.email),
                               RoundedButton(press: () {
                                  Navigator.push(context, MaterialPageRoute(builder: (context) => CreateNewPassword(),
@@ -73,7 +73,7 @@ class TrouverVotreCompte extends StatelessWidget {
                                 navigatorText: "Inscrivez-vous ici",
                                 onTap: () {
                                   Navigator.push(context,
-                                    MaterialPageRoute(builder: (context) => const SignUpScreen())
+                                    MaterialPageRoute(builder: (context) =>  SignUpScreen())
                                   );
                                 },
                               ),

@@ -1,21 +1,25 @@
+import 'package:application/home/home.dart';
 import 'package:application/screens/signup_screen.dart';
 import 'package:application/screens/trouver_votre_compte.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../components/page_title_bar.dart';
 import '../components/under_part.dart';
 import '../components/upside.dart';
 import '../core/constants.dart';
+import '../exemple.dart';
 import '../home/search.dart';
 import '../widgets/rounded_button.dart';
 import '../widgets/rounded_icon.dart';
 import '../widgets/rounded_input_field.dart';
 import '../widgets/rounded_password_field.dart';
 import 'create_new_password.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -63,15 +67,14 @@ class LoginScreen extends StatelessWidget {
                         Form(
                           child: Column(
                             children: [
-                              const RoundedInputField(
+                               RoundedInputField(
                                   hintText: "Email", icon: Icons.email),
-                              const RoundedPasswordField(hintText: 'Mot de passe',),
+                               RoundedPasswordField(hintText: 'Mot de passe',),
                               switchListTile(),
-                              RoundedButton(press: (){
-                                 Navigator.push(context, MaterialPageRoute(builder: (context) => Search(),
-                                 ),
-                                 );
-                              },
+                              RoundedButton(press:() {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => Exemple(),));
+                                },
+
                                 text: 'LOGIN',
                               ),
                               const SizedBox(
@@ -82,7 +85,7 @@ class LoginScreen extends StatelessWidget {
                                 navigatorText: "Inscrivez-vous ici",
                                 onTap: () {
                                   Navigator.push(context,
-                                    MaterialPageRoute(builder: (context) => const SignUpScreen())
+                                    MaterialPageRoute(builder: (context) => SignUpScreen())
                                   );
                                 },
                               ),
@@ -133,7 +136,7 @@ switchListTile() {
   );
 }
 
-iconButton(BuildContext context) {
+iconButton(BuildContext context,) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: const [

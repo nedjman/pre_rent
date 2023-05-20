@@ -10,24 +10,6 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CurvedNavigationBar(
-        buttonBackgroundColor: kPrimaryLightColor,
-        backgroundColor: Colors.white,
-        color: kPrimaryLightColor,
-        animationDuration: Duration(seconds: 1),
-        animationCurve: Curves.bounceOut,
-        items: <Widget>[
-          Icon(Icons.home,color: KMainColor,),
-          Icon(Icons.message,color: KMainColor,),
-          Icon(Icons.notifications_active,color: KMainColor,),
-          Icon(Icons.favorite,color: KMainColor,),
-          Icon(Icons.person,color: KMainColor,),
-
-        ],
-        onTap: (index){
-          
-        },
-      ),
       backgroundColor: Colors.white,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

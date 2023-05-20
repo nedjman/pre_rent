@@ -24,7 +24,7 @@ class _FilterState extends State<Filter> {
             children: [
 
               Text(
-                "Filter",
+                "Filtre",
                 style: TextStyle(
                   fontSize: 22,
                   color:KMainColor ,
@@ -37,7 +37,7 @@ class _FilterState extends State<Filter> {
               ),
 
               Text(
-                "your search",
+                "Votre recherche",
                 style: TextStyle(
                   fontSize: 22,
                 ),
@@ -54,7 +54,7 @@ class _FilterState extends State<Filter> {
             children: [
 
               Text(
-                "Price",
+                "Prix",
                 style: TextStyle(
                   fontSize: 22,
                   color: KMainColor,
@@ -67,7 +67,7 @@ class _FilterState extends State<Filter> {
               ),
 
               Text(
-                "range",
+                "gamme",
                 style: TextStyle(
                   fontSize: 22,
                 ),
@@ -94,14 +94,14 @@ class _FilterState extends State<Filter> {
             children: [
 
               Text(
-                r"$70k",
+                r"1000 DA",
                 style: TextStyle(
                   fontSize: 14,
                 ),
               ),
 
               Text(
-                r"$1000k",
+                r"3000DA",
                 style: TextStyle(
                   fontSize: 14,
                 ),
@@ -115,7 +115,7 @@ class _FilterState extends State<Filter> {
           ),
 
           Text(
-            "Rooms",
+            "Chambre",
             style: TextStyle(
               fontSize: 22,
               color: KMainColor,
@@ -144,7 +144,7 @@ class _FilterState extends State<Filter> {
           ),
 
           Text(
-            "Bathrooms",
+            "Salles de bain",
             style: TextStyle(
               fontSize: 22,
               color: KMainColor,

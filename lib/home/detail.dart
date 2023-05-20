@@ -5,7 +5,6 @@ import '../core/constants.dart';
 import 'data.dart';
 
 class Detail extends StatelessWidget {
-
   final Property property;
 
   Detail({required this.property});
@@ -94,7 +93,7 @@ class Detail extends StatelessWidget {
                     padding: EdgeInsets.symmetric(vertical: 4,),
                     child: Center(
                       child: Text(
-                        "FOR " + property.label,
+                        "Pour " + property.label,
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
@@ -207,7 +206,7 @@ class Detail extends StatelessWidget {
                           ),
 
                           Text(
-                            property.review + " Reviews",
+                            property.review + " Commentaires",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -285,7 +284,7 @@ class Detail extends StatelessWidget {
                                   ),
 
                                   Text(
-                                    "Property Owner",
+                                    "Propriétaire",
                                     style: TextStyle(
                                       fontSize: 16,
                                       color: Colors.grey[500],
@@ -351,9 +350,9 @@ class Detail extends StatelessWidget {
                         children: [
 
                           buildFeature(Icons.hotel, "3 Bedroom"),
-                          buildFeature(Icons.wc, "2 Bathroom"),
-                          buildFeature(Icons.bathroom, "1 Kitchen"),
-                          buildFeature(Icons.local_parking, "2 Parking"),
+                          buildFeature(Icons.kitchen, "2 Cuisine"),
+                          buildFeature(Icons.bathtub, "1 Douche"),
+                          buildFeature(Icons.garage, "2 Parking"),
 
                         ],
                       ),

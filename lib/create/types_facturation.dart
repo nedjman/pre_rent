@@ -1,14 +1,15 @@
 import 'dart:math';
 
 import 'package:application/create/points_forts.dart';
-import 'package:application/create/type_facturation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-
 import '../core/constants.dart';
 import '../widgets/rounded_button.dart';
+import 'adresse.dart';
+import 'caractéristique.dart';
+import 'logement.dart';
 
 class TypesFacturation extends StatefulWidget {
   const TypesFacturation({super.key});
@@ -18,7 +19,7 @@ class TypesFacturation extends StatefulWidget {
 }
 
 class _TypesFacturationState extends State<TypesFacturation>{
-   bool val1 = true;
+  bool val1 = true;
   bool val2 = true;
   onChangeFunction1(bool newValue1){
     setState(() {
@@ -44,12 +45,15 @@ class _TypesFacturationState extends State<TypesFacturation>{
       ),
       customSwitch(' Par jour', val1, onChangeFunction1),
       customSwitch(' Par mois', val2, onChangeFunction2),
-      const SizedBox(height: 200,),
-      Row(
+     ],
+     ),
+
+     persistentFooterButtons: [
+         Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
          TextButton(onPressed:() {
-             Navigator.push(context, MaterialPageRoute(builder: (context) => TypeFacturation(),
+             Navigator.push(context, MaterialPageRoute(builder: (context) => Caracterstique(),
                   ),
                 );
                },
@@ -67,7 +71,12 @@ class _TypesFacturationState extends State<TypesFacturation>{
           ),
           ),
           const SizedBox(width: 50),
-          TextButton(onPressed: null, child: const Text("Suivante",style: TextStyle(
+          TextButton(onPressed: () {
+             Navigator.push(context, MaterialPageRoute(builder: (context) => PointsForts(),
+                  ),
+                );
+               }, 
+          child: Text("Suivante",style: TextStyle(
           fontWeight: FontWeight.bold, fontSize: 17),),
           style: ButtonStyle(
             minimumSize: MaterialStateProperty.all(Size(130, 50)),
@@ -83,8 +92,7 @@ class _TypesFacturationState extends State<TypesFacturation>{
         
         ],
       ),
-     ],
-     ),
+      ],
     
     );
   }

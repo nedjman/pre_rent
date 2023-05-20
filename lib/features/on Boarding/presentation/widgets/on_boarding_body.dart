@@ -71,7 +71,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               textAlign: TextAlign.left,
             ),
         onTap: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(context) => const LoginScreen()));
+              Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(context) => LoginScreen()));
                    },
             ),
           ),

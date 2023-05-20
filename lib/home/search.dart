@@ -1,9 +1,11 @@
 
+import 'package:application/home/home.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../core/constants.dart';
+import '../create/adresse.dart';
+import '../pages/message.dart';
 import 'data.dart';
 import 'detail.dart';
 import 'filter.dart';
@@ -14,35 +16,15 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
-
   List<Property> properties = getPropertyList();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CurvedNavigationBar(
-        buttonBackgroundColor: kPrimaryLightColor,
-        backgroundColor: Colors.white,
-        color: kPrimaryLightColor,
-        animationDuration: Duration(seconds: 1),
-        animationCurve: Curves.bounceOut,
-        items: <Widget>[
-          Icon(Icons.home,color: KMainColor,),
-          Icon(Icons.message,color: KMainColor,),
-          Icon(Icons.notifications_active,color: KMainColor,),
-          Icon(Icons.favorite,color: KMainColor,),
-          Icon(Icons.person,color: KMainColor,),
 
-        ],
-        onTap: (index){
-          
-        },
-      ),
-      backgroundColor: Colors.white,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-
           Padding(
             padding: EdgeInsets.only(top: 48, left: 24, right: 24, bottom: 16),
             child: TextField(
@@ -441,5 +423,6 @@ class _SearchState extends State<Search> {
       }
     );
   }
+
 
 }

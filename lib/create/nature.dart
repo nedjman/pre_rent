@@ -14,3 +14,4 @@ class Nature {
   @override
   int get hashCode => url.hashCode;
 }
+

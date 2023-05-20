@@ -1,17 +1,19 @@
 
+import 'package:application/home/search.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../components/page_title_bar.dart';
 import '../components/under_part.dart';
 import '../components/upside.dart';
+import '../exemple.dart';
 import '../widgets/rounded_button.dart';
 import '../widgets/rounded_input_field.dart';
 import '../widgets/rounded_password_field.dart';
 import 'login_screen.dart';
 
 class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -60,12 +62,17 @@ class SignUpScreen extends StatelessWidget {
                         Form(
                           child: Column(
                             children: [
-                              const RoundedInputField(
+                               RoundedInputField(
                                   hintText: "Email", icon: Icons.email),
-                              const RoundedInputField(
+                               RoundedInputField(
                                   hintText: "Nom", icon: Icons.person),
-                              const RoundedPasswordField(hintText: 'Mot de passe'),
-                              RoundedButton(text: 'REGISTRE', press: () {},),
+                               RoundedPasswordField(hintText: 'Mot de passe'),
+                              RoundedButton( press:() {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => Exemple(),));
+                                  },
+                                text: 'REGISTRE',
+                              
+                              ),
                               const SizedBox(
                                 height: 10,
                               ),
@@ -74,7 +81,7 @@ class SignUpScreen extends StatelessWidget {
                                 navigatorText: "Se connecter",
                                 onTap: () {
                                   Navigator.push(context,
-                                    MaterialPageRoute(builder: (context) => const LoginScreen())
+                                    MaterialPageRoute(builder: (context) => LoginScreen())
                                   );
                                 },
                               ),

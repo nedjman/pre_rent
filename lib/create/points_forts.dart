@@ -1,9 +1,11 @@
 import 'dart:collection';
 
+import 'package:application/create/adresse.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../core/constants.dart';
+import 'logement.dart';
 import 'nature.dart';
 
 class PointsForts extends StatefulWidget {
@@ -16,25 +18,25 @@ class PointsForts extends StatefulWidget {
 class _PointsFortsState extends State<PointsForts> {
   List<Nature> natureList = [
     Nature("Près de la mosquée",
-        "https://images.unsplash.com/photo-1589779677460-a15b5b5790ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"),
+        "https://th.bing.com/th/id/R.621f42630155fcc8d651b3ce6c73c784?rik=SIAWu7dKMwe2Qw&pid=ImgRaw&r=0"),
     Nature("Proche du l'hopital",
-        "https://images.unsplash.com/photo-1520301255226-bf5f144451c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80"),
+        "https://th.bing.com/th/id/OIP.uY0qwn1AbfitklcFadzScQHaEs?pid=ImgDet&rs=1"),
     Nature("Proche du l'école",
-        "https://images.unsplash.com/photo-1504472478235-9bc48ba4d60f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"),
+        "https://th.bing.com/th/id/R.54f464824fa644de2a3089f74ec3be87?rik=v%2fiMTZ7C60C00Q&riu=http%3a%2f%2ftaleem-edu.com%2fwp-content%2fuploads%2fTESC-16.png&ehk=Z%2fKuslsOVUY8TF7H7Dm3HCgpmlSSC7BUK1nNZfA2oNw%3d&risl=&pid=ImgRaw&r=0"),
     Nature("Près de la mer",
         "https://images.unsplash.com/photo-1545579133-99bb5ab189bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"),
     Nature("Près de l'aéroport",
-        "https://images.unsplash.com/photo-1545579133-99bb5ab189bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"),
+        "https://th.bing.com/th/id/R.a3dff65995a3b7aa4aed4ade662fd51f?rik=OMQ%2fzKUlFUoMSw&riu=http%3a%2f%2fwww.firstluxemag.com%2fwp-content%2fuploads%2f2012%2f12%2fAEROPORT2.jpg&ehk=gvieSwYCet4pyvCmiv088RFHNeu%2fIFfv9Y%2bDJNclHYY%3d&risl=&pid=ImgRaw&r=0"),
     Nature("Proche du bus",
-        "https://images.unsplash.com/photo-1535591273668-578e31182c4f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"),
+        "https://th.bing.com/th/id/R.1a50cd1c6b0fb6b50157009d768eed6d?rik=YU4Onn7h3lC4NQ&pid=ImgRaw&r=0"),
     Nature("Proche du tramway",
-        "https://images.unsplash.com/photo-1624964562918-0b8cf87deee6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"),
+        "https://th.bing.com/th/id/R.d9a2389c04ca856cdbc7e7faa0b5c2d9?rik=P7NaXpUl%2fpXvIw&riu=http%3a%2f%2fmoudjahed.o.m.f.unblog.fr%2ffiles%2f2011%2f07%2ftramway2.jpg&ehk=j%2fbIzA%2bXfiKsXf5AZMty9sjL6Za9KoOsfle6As14A9w%3d&risl=&pid=ImgRaw&r=0"),
     Nature("Proche du centre de divertissement",
-        "https://images.unsplash.com/photo-1597499216184-b56bf75f84c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"),
+        "https://fscomps.fotosearch.com/compc/CSP/CSP994/%D8%AD%D8%AF%D9%8A%D9%82%D8%A9-%D8%A7%D9%84%D8%AA%D8%B3%D9%84%D9%8A%D8%A9-%D9%81%D9%8A-%D9%85%D9%86%D8%AA%D8%B5%D9%81-%D8%A7%D9%84%D8%B7%D8%B1%D9%8A%D9%82-%D8%A3%D9%84%D8%A8%D9%88%D9%85-%D8%A7%D9%84%D8%B5%D9%88%D8%B1__k16207633.jpg"),
     Nature("A proximité des centre d'activités sportives",
-        "https://images.unsplash.com/photo-1558102822-da570eb113ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"),
+        "https://th.bing.com/th/id/OIP.gLBpMvefX1wtHDU0z8ZwtAHaE8?pid=ImgDet&rs=1"),
     Nature("Proche des activités commerciales",
-        "https://images.unsplash.com/photo-1545579133-99bb5ab189bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"),
+        "https://th.bing.com/th/id/OIP.REcRb5cmoXRKVrkH8e_QXQHaE8?pid=ImgDet&w=820&h=547&rs=1"),
   ];
 
   HashSet<Nature> selectedItem = HashSet();
@@ -42,7 +44,7 @@ class _PointsFortsState extends State<PointsForts> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+      return Scaffold(
       appBar: AppBar(
         backgroundColor: KMainColor,
         centerTitle: isMultiSelectionEnabled ? false : true,
@@ -56,8 +58,7 @@ class _PointsFortsState extends State<PointsForts> {
                 icon: Icon(Icons.close))
             : null,
         title: Text(isMultiSelectionEnabled
-            ? getSelectedItemCount()
-            : "Sélectionnez les points forts de votre logement"),
+            ? getSelectedItemCount():''),
         actions: [
           Visibility(
               visible: isMultiSelectionEnabled,
@@ -81,21 +82,73 @@ class _PointsFortsState extends State<PointsForts> {
               )),
         ],
       ),
-      body: ListView(
-        children: natureList.map((Nature nature) {
-          return Card(
-              elevation: 20,
-              margin: const EdgeInsets.only(left: 10, right: 10, top: 5),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              child: Container(
-                margin: const EdgeInsets.only(
-                    left: 10, right: 10, top: 5, bottom: 5),
-                height: 70.0,
-                child: getListItem(nature),
-              ));
-        }).toList(),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          const SizedBox(height: 30),
+           Text("Sélectionnez les points forts de votre logement",
+           textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color:KMainColor),),
+           const SizedBox(height: 30),
+          Expanded(
+            child: ListView(
+              children: natureList.map((Nature nature) {
+                return Card(
+                    elevation: 20,
+                    margin: const EdgeInsets.only(left: 10, right: 10, top: 5),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Container(
+                      margin: const EdgeInsets.only(
+                          left: 10, right: 10, top: 5, bottom: 5),
+                      height: 70.0,
+                      child: getListItem(nature),
+                    ));
+              }).toList(),
+            ),
+          ),
+        ],
       ),
+        persistentFooterButtons: [
+         Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+         TextButton(onPressed:() {
+             Navigator.push(context, MaterialPageRoute(builder: (context) => logement(),
+                  ),
+                );
+               },
+                child: Text("Retour",style: TextStyle(
+          fontWeight: FontWeight.bold, fontSize: 17),),
+          style: ButtonStyle(
+            minimumSize: MaterialStateProperty.all(Size(130, 50)),
+            foregroundColor: MaterialStateProperty.all(KMainColor),
+            backgroundColor: MaterialStateProperty.all(Colors.white),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+              side: BorderSide(color: KMainColor,),
+            )
+          ),
+          ),
+          ),
+          const SizedBox(width: 50),
+          TextButton(onPressed: null, child: const Text("Suivante",style: TextStyle(
+          fontWeight: FontWeight.bold, fontSize: 17),),
+          style: ButtonStyle(
+            minimumSize: MaterialStateProperty.all(Size(130, 50)),
+            foregroundColor: MaterialStateProperty.all(Colors.white),
+            backgroundColor: MaterialStateProperty.all(KMainColor),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+              side: BorderSide(color: KMainColor,)
+            )
+          ),
+          ),
+          ),
+        
+        ],
+      ),
+      ],
     );
   }
   String getSelectedItemCount() {
@@ -142,15 +195,15 @@ class _PointsFortsState extends State<PointsForts> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     const SizedBox(
-                      height: 25,
+                      height: 10,
                     ),
                     SizedBox(
                       width: double.infinity,
-                      height: 18.0,
+                      height: 38,
                       child: Text(nature.name,style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),),
                     ),
                     const SizedBox(
-                      height: 18,
+                      height: 22,
                     ),
                   ],
                 ),

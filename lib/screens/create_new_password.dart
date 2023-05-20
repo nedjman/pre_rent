@@ -1,4 +1,5 @@
 
+import 'package:application/create/logement.dart';
 import 'package:application/screens/signup_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,6 @@ import '../components/under_part.dart';
 import '../components/upside.dart';
 import '../core/constants.dart';
 import '../create/points_forts.dart';
-import '../create/type_facturation.dart';
 import '../create/types_facturation.dart';
 import '../home/home.dart';
 import '../home/search.dart';
@@ -56,12 +56,12 @@ class CreateNewPassword extends StatelessWidget {
                         Form(
                           child: Column(
                             children: [
-                              const RoundedPasswordField(
+                               RoundedPasswordField(
                                   hintText: "Mot de passe"),
-                              const RoundedPasswordField(
+                                RoundedInputField(
                                   hintText: "Confirmer mot de passe"),
                               RoundedButton( press: () {
-                                 Navigator.push(context, MaterialPageRoute(builder: (context) => TypesFacturation(),
+                                 Navigator.push(context, MaterialPageRoute(builder: (context) => logement(),
                                  ),
                                  );
                               },
@@ -75,7 +75,7 @@ class CreateNewPassword extends StatelessWidget {
                                 navigatorText: "Inscrivez-vous ici",
                                 onTap: () {
                                   Navigator.push(context,
-                                    MaterialPageRoute(builder: (context) => const SignUpScreen())
+                                    MaterialPageRoute(builder: (context) =>  SignUpScreen())
                                   );
                                 },
                               ),
